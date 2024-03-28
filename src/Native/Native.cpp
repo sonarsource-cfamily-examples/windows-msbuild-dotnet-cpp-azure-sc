@@ -1,9 +1,12 @@
+#include "pch.h"
 #include <iostream>
 
 using namespace std;
 
-int main(int argc, char* argv[]) {
-  int num = argc - 1;
+DLL_EXPORT int STDMETHODCALLTYPE hello(int param) {
+  int num = param - 1;
+
+  cout << "Hello from C++!" << std::endl;
 
   if (num == 0) {
     cout << "No arguments provided\n";
@@ -13,14 +16,8 @@ int main(int argc, char* argv[]) {
     cout << "2 arguments provided\n";
   } else {
     cout << num << " arguments provided\n";
-  }
-  if (argv != 0) {
-    cout << "argv not null\n";; // intentional extra-semicolon
-  }
-  if (argv == nullptr) {
-    return **argv; // intentional nullptr dereference
+    ; // intentional extra-semicolon
   }
 
   return 0;
 }
-

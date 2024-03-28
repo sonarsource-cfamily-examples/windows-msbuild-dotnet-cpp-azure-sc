@@ -1,11 +1,32 @@
-= Windows\MSBuild
+= Example project that combines C++ and C#
+// URIs:
+:uri-qg-status: https://sonarcloud.io/project/overview?id=sonarsource-cfamily-examples_windows-msbuild-dotnet-cpp-azure-sc
+:img-qg-status: https://sonarcloud.io/api/project_badges/measure?project=sonarsource-cfamily-examples_windows-msbuild-dotnet-cpp-azure-sc&metric=alert_status
+:uri-build-status: https://dev.azure.com/sonarsource-cfamily-examples/windows-msbuild-dotnet-cpp-azure-sc/_build
+:img-build-status: https://dev.azure.com/sonarsource-cfamily-examples/windows-msbuild-dotnet-cpp-azure-sc/_apis/build/status/sonarsource-cfamily-examples.windows-msbuild-azure-sc
 
-A build of the https://github.com/sonarsource-cfamily-examples/code[code repository] on Windows platform using MSBuild build system.
+image:{img-build-status}[Build Status, link={uri-build-status}]
+image:{img-qg-status}[Quality Gate Status,link={uri-qg-status}]
 
-To build the code run:
-----
-msbuild sonar_scanner_example.vcxproj
-----
+*This project is analysed on https://sonarcloud.io/dashboard?id=sonarsource-cfamily-examples_windows-msbuild-dotnet-cpp-azure-sc[SonarCloud]!*
+
+This project demonstrates how to analyze a solution that contains both C#
+and {cpp}  projects. It uses the SonarScanner for .NET to build and analyze the C#
+projects, wrapped with `build-wrapper-win-x86-64.exe` to generate the input
+necessary to analyze the {cpp}projects. The analysis is done on https://docs.sonarcloud.io/getting-started/azure-devops/[Azure DevOps].
+
+
+= Documentation
+
+- https://docs.sonarcloud.io/getting-started/azure-devops/[Getting Started with Azure DevOps]
+- https://docs.sonarsource.com/sonarcloud/advanced-setup/ci-based-analysis/sonarcloud-extension-for-azure-devops/[SonarCloud extension for Azure DevOps]
+- https://docs.sonarsource.com/sonarcloud/advanced-setup/ci-based-analysis/sonarscanner-for-net/[SonarScanner for .NET]
+- https://docs.sonarsource.com/sonarcloud/advanced-setup/languages/c-c-objective-c/\#solution-mix[Solution with a mix of C# and C++]
+- https://docs.sonarcloud.io/advanced-setup/languages/c-c-objective-c/[Documentation of the C, C++ and Objective-C plugin and its Build Wrapper]
+- https://docs.sonarcloud.io/advanced-setup/languages/c-c-objective-c/#analysis-cache[Configuring C, C++ and Objective-C analysis cache]
+- https://docs.sonarcloud.io/advanced-setup/languages/c-c-objective-c/#parallel-code-scan[Configuring multithreaded execution]
+- https://docs.sonarcloud.io/advanced-setup/languages/c-c-objective-c/#analysis-steps-using-compilation-database[Using compilation database (compile_commands.json)]
+- https://docs.sonarcloud.io/enriching/test-coverage/test-coverage-parameters/[Test coverage parameters]
 
 = Code Description
 

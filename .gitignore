@@ -33,6 +33,11 @@ out
 .vs
 Debug
 Release
+[Bb]in/
+[Oo]bj/
+
+# VSCode
+.vscode
 
 # XCode
 *.xcodeproj/project.xcworkspace/

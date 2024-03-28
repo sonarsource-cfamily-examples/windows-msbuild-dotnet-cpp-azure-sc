@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.Build.Traversal">
+    <PropertyGroup>
+        <RunCommand>$(BinRoot)\$(Configuration)\CSharp</RunCommand>
+        <RunCommand Condition="$([MSBuild]::IsOsPlatform('Windows'))">
+            $(BinRoot)\$(Configuration)\CSharp.exe</RunCommand>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="src\Native\Native.csproj" />
+        <ProjectReference Include="src\CSharp\CSharp.csproj" />
+    </ItemGroup>
+</Project>

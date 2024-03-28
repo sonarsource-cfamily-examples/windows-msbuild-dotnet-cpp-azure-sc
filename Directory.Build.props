@@ -1,0 +1,6 @@
+<Project>
+    <PropertyGroup>
+        <SourceRoot>$(MSBuildThisFileDirectory)src</SourceRoot>
+        <BinRoot>$(MSBuildThisFileDirectory)bin</BinRoot>
+    </PropertyGroup>
+</Project>

@@ -1,0 +1,24 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+    <PropertyGroup>
+        <TargetFrameWork>net8.0</TargetFrameWork>
+        <OutputType>exe</OutputType>
+        <UseAppHost>true</UseAppHost>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="$(SourceRoot)\Native\Native.vcxproj">
+            <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+        </ProjectReference>
+    </ItemGroup>
+
+    <ItemGroup>
+        <Clean Include="$(BinRoot)/$(Configuration)/$(TargetName)*" />
+    </ItemGroup>
+
+    <Target Name="CopyOutput" AfterTargets="Build">
+        <ItemGroup>
+            <AllOutputs Include="$(OutputPath)$(TargetName).*" />
+        </ItemGroup>
+        <Copy SourceFiles="@(AllOutputs)" DestinationFolder="$(BinRoot)/$(Configuration)" />
+    </Target>
+</Project>
