@@ -7,11 +7,11 @@ namespace CSharp
 
         public static void Main(string[] args)
         {
-            System.Console.WriteLine("Hello, World!");
+            System.Console.WriteLine("Hello from C#!");
             value = 42;
             if (value <= int.MaxValue)
             {
-                Native.hello(42);
+                Native.hello(42, "called from C#");
             }
         }
     }
