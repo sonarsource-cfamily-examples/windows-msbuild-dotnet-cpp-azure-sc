@@ -16,7 +16,7 @@ jobs:
       configMode: 'manual'
       projectKey: 'sonarsource-cfamily-examples_windows-msbuild-dotnet-cpp-azure-sc'
       extraProperties: |
-        sonar.cfamily.build-wrapper-output=$(Pipeline.Workspace)\build_wrapper_output_directory
+        sonar.cfamily.compile-commands=$(Pipeline.Workspace)\build_wrapper_output_directory\compile_commands.json
   - pwsh: |
       curl --create-dirs -sSLo $HOME\.sonar\build-wrapper-win-x86.zip ${{variables.BUILD_WRAPPER_DOWNLOAD_URL}}
       Expand-Archive $HOME\.sonar\build-wrapper-win-x86.zip -DestinationPath $HOME\.sonar\ -Force
