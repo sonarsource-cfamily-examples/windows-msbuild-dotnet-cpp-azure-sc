@@ -21,7 +21,7 @@ necessary to analyze the {cpp}projects. The analysis is done on https://docs.son
 - https://docs.sonarcloud.io/getting-started/azure-devops/[Getting Started with Azure DevOps]
 - https://docs.sonarsource.com/sonarcloud/advanced-setup/ci-based-analysis/sonarcloud-extension-for-azure-devops/[SonarCloud extension for Azure DevOps]
 - https://docs.sonarsource.com/sonarcloud/advanced-setup/ci-based-analysis/sonarscanner-for-net/[SonarScanner for .NET]
-- https://docs.sonarsource.com/sonarcloud/advanced-setup/languages/c-c-objective-c/\#solution-mix[Solution with a mix of C# and C++]
+- https://docs.sonarsource.com/sonarcloud/advanced-setup/languages/c-family/running-the-analysis/#sonarscanner-for-dotnet[Solution with a mix of C# and C++]
 - https://docs.sonarcloud.io/advanced-setup/languages/c-c-objective-c/[Documentation of the C, C++ and Objective-C plugin and its Build Wrapper]
 - https://docs.sonarcloud.io/advanced-setup/languages/c-c-objective-c/#analysis-cache[Configuring C, C++ and Objective-C analysis cache]
 - https://docs.sonarcloud.io/advanced-setup/languages/c-c-objective-c/#parallel-code-scan[Configuring multithreaded execution]
