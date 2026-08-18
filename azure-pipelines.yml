@@ -27,4 +27,9 @@ jobs:
       & "$HOME\.sonar\build-wrapper-win-x86\build-wrapper-win-x86-64.exe" --out-dir $(Pipeline.Workspace)\build_wrapper_output_directory $msbuild windows-msbuild-dotnet-cpp.sln /t:rebuild /nodeReuse:false
     workingDirectory: .
     displayName: Build in build-wrapper
+  - task: JavaToolInstaller@0
+    inputs:
+      versionSpec: '21'
+      jdkArchitectureOption: 'x64'
+      jdkSourceOption: 'PreInstalled'
   - task: SonarCloudAnalyze@1
