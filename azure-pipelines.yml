@@ -8,11 +8,11 @@ jobs:
   steps:
   - checkout: self
     fetchDepth: 0 # Need blame information for SonarCloud
-  - task: SonarCloudPrepare@1
+  - task: SonarCloudPrepare@4
     inputs:
       SonarCloud: 'SonarCloud' # Name of the SonarCloud service connection you created
       organization: 'sonarsource-cfamily-examples'
-      scannerMode: 'MSBuild'
+      scannerMode: 'dotnet'
       configMode: 'manual'
       projectKey: 'sonarsource-cfamily-examples_windows-msbuild-dotnet-cpp-azure-sc'
       extraProperties: |
@@ -27,6 +27,6 @@ jobs:
       & "$HOME\.sonar\build-wrapper-win-x86\build-wrapper-win-x86-64.exe" --out-dir $(Pipeline.Workspace)\build_wrapper_output_directory $msbuild windows-msbuild-dotnet-cpp.sln /t:rebuild /nodeReuse:false
     workingDirectory: .
     displayName: Build in build-wrapper
-  - task: SonarCloudAnalyze@1
+  - task: SonarCloudAnalyze@4
     inputs:
       jdkversion: 'JAVA_HOME_21_X64'
